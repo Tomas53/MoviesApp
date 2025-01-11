@@ -1,3 +1,4 @@
+import repositories.DatabaseRepo;
 import utils.JsonFileConverter;
 
 public class Main {
@@ -6,5 +7,7 @@ public class Main {
         jsonFileConverter.getAllUsersFromJson().forEach(System.out::println);
         jsonFileConverter.getAllMoviesFromJson();
         jsonFileConverter.getAllPlatformsFromJson();
+        DatabaseRepo databaseRepo=new DatabaseRepo();
+        databaseRepo.createTables();
     }
 }

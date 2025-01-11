@@ -11,7 +11,7 @@
         "genre": "Sci-Fi",
         "director": "Christopher Nolan",
         "price": 3.99,
-        "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+        "movieCast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
         "duration": 148,
         "imdbRating": 8.8,
         "metascore": 74
@@ -22,7 +22,7 @@
         "genre": "Action",
         "director": "Lana Wachowski, Lilly Wachowski",
         "price": 2.99,
-        "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+        "movieCast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
         "duration": 136,
         "imdbRating": 8.7,
         "metascore": 73
@@ -41,7 +41,7 @@
         "genre": "Animation",
         "director": "Chris Buck, Jennifer Lee",
         "price": 2.99,
-        "cast": ["Idina Menzel", "Kristen Bell", "Josh Gad"],
+        "movieCast": ["Idina Menzel", "Kristen Bell", "Josh Gad"],
         "duration": 102,
         "imdbRating": 7.4,
         "metascore": 74
@@ -52,7 +52,7 @@
         "genre": "Animation",
         "director": "Ron Clements, John Musker",
         "price": 3.99,
-        "cast": ["Auli'i Cravalho", "Dwayne Johnson", "Rachel House"],
+        "movieCast": ["Auli'i Cravalho", "Dwayne Johnson", "Rachel House"],
         "duration": 107,
         "imdbRating": 7.6,
         "metascore": 81
