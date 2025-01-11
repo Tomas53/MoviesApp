@@ -17,6 +17,6 @@ public class MovieDto {
     private double price;
     private List<String> cast;
     private int duration;
-    private double IMDbRating;
+    private double imdbRating;
     private double metascore;
 }

@@ -1,0 +1,123 @@
+[
+  {
+    "movieId": 201,
+    "title": "Inception",
+    "genre": "Sci-Fi",
+    "director": "Christopher Nolan",
+    "price": 3.99,
+    "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+    "duration": 148,
+    "imdbRating": 8.8,
+    "metascore": 74
+  },
+  {
+    "movieId": 202,
+    "title": "The Matrix",
+    "genre": "Action",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "price": 2.99,
+    "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+    "duration": 136,
+    "imdbRating": 8.7,
+    "metascore": 73
+  },
+  {
+    "movieId": 203,
+    "title": "Parasite",
+    "genre": "Thriller",
+    "director": "Bong Joon-ho",
+    "price": 4.99,
+    "cast": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
+    "duration": 132,
+    "imdbRating": 8.6,
+    "metascore": 96
+  },
+  {
+    "movieId": 204,
+    "title": "Titanic",
+    "genre": "Romance",
+    "director": "James Cameron",
+    "price": 3.99,
+    "cast": ["Leonardo DiCaprio", "Kate Winslet"],
+    "duration": 195,
+    "imdbRating": 7.8,
+    "metascore": 75
+  },
+  {
+    "movieId": 205,
+    "title": "Avengers: Endgame",
+    "genre": "Action",
+    "director": "Anthony Russo, Joe Russo",
+    "price": 5.99,
+    "cast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
+    "duration": 181,
+    "imdbRating": 8.4,
+    "metascore": 78
+  },
+  {
+    "movieId": 206,
+    "title": "Frozen",
+    "genre": "Animation",
+    "director": "Chris Buck, Jennifer Lee",
+    "price": 2.99,
+    "cast": ["Idina Menzel", "Kristen Bell", "Josh Gad"],
+    "duration": 102,
+    "imdbRating": 7.4,
+    "metascore": 74
+  },
+  {
+    "movieId": 207,
+    "title": "Moana",
+    "genre": "Animation",
+    "director": "Ron Clements, John Musker",
+    "price": 3.99,
+    "cast": ["Auli'i Cravalho", "Dwayne Johnson", "Rachel House"],
+    "duration": 107,
+    "imdbRating": 7.6,
+    "metascore": 81
+  },
+  {
+    "movieId": 208,
+    "title": "The Godfather",
+    "genre": "Crime",
+    "director": "Francis Ford Coppola",
+    "price": 4.99,
+    "cast": ["Marlon Brando", "Al Pacino", "James Caan"],
+    "duration": 175,
+    "imdbRating": 9.2,
+    "metascore": 100
+  },
+  {
+    "movieId": 209,
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "director": "Frank Darabont",
+    "price": 3.99,
+    "cast": ["Tim Robbins", "Morgan Freeman"],
+    "duration": 142,
+    "imdbRating": 9.3,
+    "metascore": 80
+  },
+  {
+    "movieId": 211,
+    "title": "Fight Club",
+    "genre": "Drama",
+    "director": "David Fincher",
+    "price": 3.99,
+    "cast": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
+    "duration": 139,
+    "imdbRating": 8.8,
+    "metascore": 66
+  },
+  {
+    "movieId": 212,
+    "title": "The Dark Knight",
+    "genre": "Action",
+    "director": "Christopher Nolan",
+    "price": 4.99,
+    "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "duration": 152,
+    "imdbRating": 9.0,
+    "metascore": 84
+  }
+]

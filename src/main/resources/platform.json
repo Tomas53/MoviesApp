@@ -1,0 +1,62 @@
+[
+  {
+    "platformId": 101,
+    "platformName": "Netflix",
+    "subscriptionType": "Monthly",
+    "price": 15.99,
+    "movies": [
+      {
+        "movieId": 201,
+        "title": "Inception",
+        "genre": "Sci-Fi",
+        "director": "Christopher Nolan",
+        "price": 3.99,
+        "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+        "duration": 148,
+        "imdbRating": 8.8,
+        "metascore": 74
+      },
+      {
+        "movieId": 202,
+        "title": "The Matrix",
+        "genre": "Action",
+        "director": "Lana Wachowski, Lilly Wachowski",
+        "price": 2.99,
+        "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+        "duration": 136,
+        "imdbRating": 8.7,
+        "metascore": 73
+      }
+    ]
+  },
+  {
+    "platformId": 103,
+    "platformName": "Disney+",
+    "subscriptionType": "Monthly",
+    "price": 7.99,
+    "movies": [
+      {
+        "movieId": 206,
+        "title": "Frozen",
+        "genre": "Animation",
+        "director": "Chris Buck, Jennifer Lee",
+        "price": 2.99,
+        "cast": ["Idina Menzel", "Kristen Bell", "Josh Gad"],
+        "duration": 102,
+        "imdbRating": 7.4,
+        "metascore": 74
+      },
+      {
+        "movieId": 207,
+        "title": "Moana",
+        "genre": "Animation",
+        "director": "Ron Clements, John Musker",
+        "price": 3.99,
+        "cast": ["Auli'i Cravalho", "Dwayne Johnson", "Rachel House"],
+        "duration": 107,
+        "imdbRating": 7.6,
+        "metascore": 81
+      }
+    ]
+  }
+  ]
