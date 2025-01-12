@@ -1,32 +1,32 @@
 [
   {
-    "platform_id": 1,
-    "platform_name": "Netflix",
-    "subscription_type": "Monthly",
+    "platformId": 1,
+    "platformName": "Netflix",
+    "subscriptionType": "Monthly",
     "price": 15
   },
   {
-    "platform_id": 2,
-    "platform_name": "Hulu",
-    "subscription_type": "Monthly",
+    "platformId": 2,
+    "platformName": "Hulu",
+    "subscriptionType": "Monthly",
     "price": 12
   },
   {
-    "platform_id": 3,
-    "platform_name": "Disney+",
-    "subscription_type": "Monthly",
+    "platformId": 3,
+    "platformName": "Disney+",
+    "subscriptionType": "Monthly",
     "price": 8
   },
   {
-    "platform_id": 4,
-    "platform_name": "Amazon Prime Video",
-    "subscription_type": "Yearly",
+    "platformId": 4,
+    "platformName": "Amazon Prime Video",
+    "subscriptionType": "Yearly",
     "price": 119
   },
   {
-    "platform_id": 5,
-    "platform_name": "HBO Max",
-    "subscription_type": "Monthly",
+    "platformId": 5,
+    "platformName": "HBO Max",
+    "subscriptionType": "Monthly",
     "price": 14
   }
 ]
