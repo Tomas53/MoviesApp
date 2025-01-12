@@ -18,50 +18,42 @@ public class DatabaseRepo {
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
             String sql = """
-                        CREATE TABLE IF NOT EXISTS movies (
-                            movieId SERIAL PRIMARY KEY,
-                            title VARCHAR(50),
-                            genre VARCHAR(20),
-                            director VARCHAR(100),
-                            price DOUBLE PRECISION,
-                            duration INT,
-                            imdbRating DOUBLE PRECISION,
-                            metascore INT
-                        );
-                    
-                        CREATE TABLE IF NOT EXISTS platforms (
-                            platform_id SERIAL PRIMARY KEY,
-                            platform_name VARCHAR(100),
-                            subscription_type VARCHAR(50),
-                            price INT
-                        );
-                    
-                        CREATE TABLE IF NOT EXISTS users (
-                            id SERIAL PRIMARY KEY,
-                            name VARCHAR(255),
-                            date_of_birth DATE,
-                            email VARCHAR(100),
-                            street VARCHAR(255)
-                        );
-                    
-                        create table if not exists user_platform (
-                            id serial primary key,
-                            user_id int references users(id),
-                            platform_id int references platforms(platform_id)
-                        );
-                    
-                        create table if not exists platform_movies (
-                            id serial primary key,
-                            platform_id int references platforms(platform_id),
-                            movie_id int references movies(movie_id),
-                            platform_id INT REFERENCES platforms(platform_id)
-                        );
-                    
-                    create table if not exists platform_movies (    
-                    id serial primary key,    
-                    platform_id int references platforms(platform_id),    
-                    movie_id int references movies(movieId));
-                    """;
+                CREATE TABLE IF NOT EXISTS movies (
+                    movieId SERIAL PRIMARY KEY,
+                    title VARCHAR(50),
+                    genre VARCHAR(20),
+                    director VARCHAR(100),
+                    price DOUBLE PRECISION,
+                    duration INT,
+                    imdbRating DOUBLE PRECISION,
+                    metascore INT
+                );
+
+                CREATE TABLE IF NOT EXISTS platforms (
+                    platform_id SERIAL PRIMARY KEY,
+                    platform_name VARCHAR(100),
+                    subscription_type VARCHAR(50),
+                    price INT
+                );
+          
+                CREATE TABLE IF NOT EXISTS users (
+                    id SERIAL PRIMARY KEY,
+                    name VARCHAR(255),
+                    email VARCHAR(100)
+                );
+            
+                create table if not exists user_platform (
+                    id serial primary key,
+                    user_id int references users(id),
+                    platform_id int references platforms(platform_id)
+                );
+            
+                create table if not exists platform_movies (
+                    id serial primary key,
+                    platform_id int references platforms(platform_id),
+                    movie_id int references movies(movieId)
+                );
+            """;
             System.out.println("[LOG] " + sql);
             statement.executeUpdate(sql);
             System.out.println("Tables created successfully.");
@@ -72,12 +64,12 @@ public class DatabaseRepo {
 
     public void deleteTables() {
         String sql = """
-                    DROP TABLE IF EXISTS users CASCADE;
-                    DROP TABLE IF EXISTS platforms CASCADE;
-                    DROP TABLE IF EXISTS movies CASCADE;
-                    drop table if exists user_platform cascade;
-                    drop table if exists platform_movies cascade;
-                """;
+            DROP TABLE IF EXISTS users CASCADE;
+            DROP TABLE IF EXISTS platforms CASCADE;
+            DROP TABLE IF EXISTS movies CASCADE;
+            drop table if exists user_platform cascade;
+            drop table if exists platform_movies cascade;
+        """;
 
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
