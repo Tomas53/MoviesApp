@@ -9,5 +9,6 @@ public class Main {
         jsonFileConverter.getAllPlatformsFromJson();
         DatabaseRepo databaseRepo=new DatabaseRepo();
         databaseRepo.createTables();
+        System.out.println("testing pull request");
     }
 }
