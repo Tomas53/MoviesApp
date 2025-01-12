@@ -73,6 +73,7 @@ public class DatabaseRepo {
             drop table if exists user_platform cascade;
             drop table if exists platform_movies cascade;
         """;
+
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
             System.out.println("[LOG] " + sql);
