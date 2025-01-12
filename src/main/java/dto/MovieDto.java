@@ -15,7 +15,6 @@ public class MovieDto {
     private String genre;
     private String director;
     private double price;
-    private List<String> movieCast;
     private int duration;
     private double imdbRating;
     private double metascore;
