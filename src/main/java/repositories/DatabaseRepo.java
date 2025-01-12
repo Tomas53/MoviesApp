@@ -6,10 +6,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DatabaseRepo {
-    //insert DB name, user name and password
     private static final String URL = "jdbc:postgresql://localhost:5432/moviesApp";
-    private static final String USER = "******";
-    private static final String PASSWORD = "******";
+    private static final String USER = "*";
+    private static final String PASSWORD = "*";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
@@ -18,8 +17,7 @@ public class DatabaseRepo {
     public void createTables() {
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
-
-            String createMoviesTable = """
+            String sql = """
                 CREATE TABLE IF NOT EXISTS movies (
                     movieId SERIAL PRIMARY KEY,
                     title VARCHAR(50),
@@ -30,37 +28,39 @@ public class DatabaseRepo {
                     imdbRating DOUBLE PRECISION,
                     metascore INT
                 );
-            """;
-            System.out.println("[LOG] Executing SQL: " + createMoviesTable);
-            statement.executeUpdate(createMoviesTable);
 
-            String createPlatformsTable = """
                 CREATE TABLE IF NOT EXISTS platforms (
                     platform_id SERIAL PRIMARY KEY,
                     platform_name VARCHAR(100),
                     subscription_type VARCHAR(50),
-                    price INT,
-                    movie_id INT REFERENCES movies(movie_id)
+                    price INT
                 );
-            """;
-            System.out.println("[LOG] Executing SQL: " + createPlatformsTable);
-            statement.executeUpdate(createPlatformsTable);
-
-            String createUsersTable = """
+          
                 CREATE TABLE IF NOT EXISTS users (
                     id SERIAL PRIMARY KEY,
                     name VARCHAR(255),
                     date_of_birth DATE,
                     email VARCHAR(100),
+                    street VARCHAR(255)
+                );
+            
+                create table if not exists user_platform (
+                    id serial primary key,
+                    user_id int references users(id),
+                    platform_id int references platforms(platform_id)
+                );
+            
+                create table if not exists platform_movies (
+                    id serial primary key,
+                    platform_id int references platforms(platform_id),
+                    movie_id int references movies(movie_id),
                     platform_id INT REFERENCES platforms(platform_id)
                 );
             """;
-            System.out.println("[LOG] Executing SQL: " + createUsersTable);
-            statement.executeUpdate(createUsersTable);
-
-            System.out.println("[LOG] Tables created successfully.");
+            System.out.println("[LOG] " + sql);
+            statement.executeUpdate(sql);
+            System.out.println("Tables created successfully.");
         } catch (SQLException e) {
-            System.err.println("[ERROR] Table creation failed: " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -70,14 +70,16 @@ public class DatabaseRepo {
             DROP TABLE IF EXISTS users CASCADE;
             DROP TABLE IF EXISTS platforms CASCADE;
             DROP TABLE IF EXISTS movies CASCADE;
+            drop table if exists user_platform cascade;
+            drop table if exists platform_movies cascade;
         """;
+
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
-            System.out.println("[LOG] Executing SQL: " + sql);
+            System.out.println("[LOG] " + sql);
             statement.executeUpdate(sql);
-            System.out.println("[LOG] Tables dropped successfully.");
+            System.out.println("Tables dropped successfully.");
         } catch (SQLException e) {
-            System.err.println("[ERROR] Table deletion failed: " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
