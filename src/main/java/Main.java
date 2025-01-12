@@ -8,6 +8,7 @@ public class Main {
         jsonFileConverter.getAllMoviesFromJson();
         jsonFileConverter.getAllPlatformsFromJson();
         DatabaseRepo databaseRepo=new DatabaseRepo();
+        databaseRepo.deleteTables();
         databaseRepo.createTables();
     }
 }
