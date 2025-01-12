@@ -1,9 +1,11 @@
 import repositories.*;
+import utils.DatabaseSeeder;
 import utils.JsonFileConverter;
 
 public class Main {
     public static void main(String[] args) {
         JsonFileConverter jsonFileConverter = new JsonFileConverter();
+        DatabaseSeeder databaseSeeder = new DatabaseSeeder(jsonFileConverter);
         DatabaseRepo databaseRepo = new DatabaseRepo();
         UserRepo userRepo = new UserRepo();
         PlatformRepo platformRepo = new PlatformRepo();
@@ -12,8 +14,6 @@ public class Main {
         PlatformMoviesRepo platformMoviesRepo = new PlatformMoviesRepo();
 
         databaseRepo.createTables();
-        jsonFileConverter.seedDbTablesWithDummyData(movieRepo, platformRepo, userRepo, userPlatformRepo, platformMoviesRepo);
+        databaseSeeder.seedDbTablesWithDummyData(movieRepo, platformRepo, userRepo, userPlatformRepo, platformMoviesRepo);
     }
-
-
 }
