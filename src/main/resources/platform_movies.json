@@ -1,57 +1,57 @@
 [
   {
     "id": 1,
-    "platform_id": 1,
-    "movie_id": 201
+    "platformId": 1,
+    "movieId": 201
   },
   {
     "id": 2,
-    "platform_id": 1,
-    "movie_id": 202
+    "platformId": 1,
+    "movieId": 202
   },
   {
     "id": 3,
-    "platform_id": 2,
-    "movie_id": 203
+    "platformId": 2,
+    "movieId": 203
   },
   {
     "id": 4,
-    "platform_id": 3,
-    "movie_id": 204
+    "platformId": 3,
+    "movieId": 204
   },
   {
     "id": 5,
-    "platform_id": 4,
-    "movie_id": 205
+    "platformId": 4,
+    "movieId": 205
   },
   {
     "id": 6,
-    "platform_id": 5,
-    "movie_id": 206
+    "platformId": 5,
+    "movieId": 206
   },
   {
     "id": 7,
-    "platform_id": 1,
-    "movie_id": 207
+    "platformId": 1,
+    "movieId": 207
   },
   {
     "id": 8,
-    "platform_id": 2,
-    "movie_id": 208
+    "platformId": 2,
+    "movieId": 208
   },
   {
     "id": 9,
-    "platform_id": 3,
-    "movie_id": 209
+    "platformId": 3,
+    "movieId": 209
   },
   {
     "id": 10,
-    "platform_id": 4,
-    "movie_id": 211
+    "platformId": 4,
+    "movieId": 211
   },
   {
     "id": 11,
-    "platform_id": 5,
-    "movie_id": 212
+    "platformId": 5,
+    "movieId": 212
   }
 ]
