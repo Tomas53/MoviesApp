@@ -86,41 +86,4 @@ public class JsonFileConverter {
             throw new RuntimeException("Error reading platform_movies.json file", e);
         }
     }
-
-    public void seedDbTablesWithDummyData(MovieRepo movieRepo,
-                                                  PlatformRepo platformRepo, UserRepo userRepo,
-                                                  UserPlatformRepo userPlatformRepo, PlatformMoviesRepo platformMoviesRepo) {
-        try {
-            // Seed movies table
-            var movies = getAllMoviesFromJson();
-            movieRepo.insertMovies(movies);
-            System.out.println("Movies table seeded successfully!");
-
-            // Seed platforms table
-            var platforms = getAllPlatformsFromJson();
-            platformRepo.insertPlatforms(platforms);
-            System.out.println("Platforms table seeded successfully!");
-
-            // Seed users table
-            var users = getAllUsersFromJson();
-            for (var user : users) {
-                userRepo.insertUser(user);
-            }
-            System.out.println("Users table seeded successfully!");
-
-            // Seed user platforms table
-            var userPlatforms = getAllUserPlatformsFromJson();
-            userPlatformRepo.insertUserPlatforms(userPlatforms);
-            System.out.println("User platforms table seeded successfully!");
-
-            // Seed platform movies table
-            var platformMovies = getAllPlatformMoviesFromJson();
-            platformMoviesRepo.insertPlatformMovies(platformMovies);
-            System.out.println("latform movies table seeded successfully!");
-
-        } catch (Exception e) {
-            System.err.println("Error seeding tables: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
 }
