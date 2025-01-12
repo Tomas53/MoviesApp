@@ -30,9 +30,9 @@ public class DatabaseRepo {
                 );
 
                 CREATE TABLE IF NOT EXISTS platforms (
-                    platform_id SERIAL PRIMARY KEY,
-                    platform_name VARCHAR(100),
-                    subscription_type VARCHAR(50),
+                    platformId SERIAL PRIMARY KEY,
+                    platformName VARCHAR(100),
+                    subscriptionType VARCHAR(50),
                     price INT
                 );
           
@@ -44,14 +44,14 @@ public class DatabaseRepo {
             
                 create table if not exists user_platform (
                     id serial primary key,
-                    user_id int references users(id),
-                    platform_id int references platforms(platform_id)
+                    userId int references users(id),
+                    platformId int references platforms(platformId)
                 );
             
                 create table if not exists platform_movies (
                     id serial primary key,
-                    platform_id int references platforms(platform_id),
-                    movie_id int references movies(movieId)
+                    platformId int references platforms(platformId),
+                    movieId int references movies(movieId)
                 );
             """;
             System.out.println("[LOG] " + sql);
