@@ -1,62 +1,32 @@
 [
   {
-    "platformId": 101,
-    "platformName": "Netflix",
-    "subscriptionType": "Monthly",
-    "price": 15.99,
-    "movies": [
-      {
-        "movieId": 201,
-        "title": "Inception",
-        "genre": "Sci-Fi",
-        "director": "Christopher Nolan",
-        "price": 3.99,
-        "movieCast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
-        "duration": 148,
-        "imdbRating": 8.8,
-        "metascore": 74
-      },
-      {
-        "movieId": 202,
-        "title": "The Matrix",
-        "genre": "Action",
-        "director": "Lana Wachowski, Lilly Wachowski",
-        "price": 2.99,
-        "movieCast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
-        "duration": 136,
-        "imdbRating": 8.7,
-        "metascore": 73
-      }
-    ]
+    "platform_id": 1,
+    "platform_name": "Netflix",
+    "subscription_type": "Monthly",
+    "price": 15
   },
   {
-    "platformId": 103,
-    "platformName": "Disney+",
-    "subscriptionType": "Monthly",
-    "price": 7.99,
-    "movies": [
-      {
-        "movieId": 206,
-        "title": "Frozen",
-        "genre": "Animation",
-        "director": "Chris Buck, Jennifer Lee",
-        "price": 2.99,
-        "movieCast": ["Idina Menzel", "Kristen Bell", "Josh Gad"],
-        "duration": 102,
-        "imdbRating": 7.4,
-        "metascore": 74
-      },
-      {
-        "movieId": 207,
-        "title": "Moana",
-        "genre": "Animation",
-        "director": "Ron Clements, John Musker",
-        "price": 3.99,
-        "movieCast": ["Auli'i Cravalho", "Dwayne Johnson", "Rachel House"],
-        "duration": 107,
-        "imdbRating": 7.6,
-        "metascore": 81
-      }
-    ]
+    "platform_id": 2,
+    "platform_name": "Hulu",
+    "subscription_type": "Monthly",
+    "price": 12
+  },
+  {
+    "platform_id": 3,
+    "platform_name": "Disney+",
+    "subscription_type": "Monthly",
+    "price": 8
+  },
+  {
+    "platform_id": 4,
+    "platform_name": "Amazon Prime Video",
+    "subscription_type": "Yearly",
+    "price": 119
+  },
+  {
+    "platform_id": 5,
+    "platform_name": "HBO Max",
+    "subscription_type": "Monthly",
+    "price": 14
   }
-  ]
+]

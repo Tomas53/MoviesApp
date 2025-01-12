@@ -13,8 +13,6 @@ import java.util.List;
 public class UserDto {
     private int id;
     private String name;
-    private LocalDate dateOfBirth;
     private String email;
-    private int platformId;
-    private List<PlatformDto> platforms;
+//    private List<PlatformDto> platforms;
 }

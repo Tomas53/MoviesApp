@@ -9,16 +9,16 @@ import java.sql.Statement;
 
 public class UserRepo {
     public void insertUser(UserDto userDto){
-        String SQL= """
-                insert into Users (name, date_of_birth, email, platformid values (?, ?, ?, ?)
+        String SQL = """
+                INSERT INTO Users (name, email) VALUES (?, ?)
                 """;
 
         try(Connection connection=DatabaseRepo.getConnection()){
             PreparedStatement preparedStatement=connection.prepareStatement(SQL);
             preparedStatement.setString(1, userDto.getName());
-            preparedStatement.setDate(2, java.sql.Date.valueOf(userDto.getDateOfBirth()));
-            preparedStatement.setString(3, userDto.getEmail());
-            preparedStatement.setInt(4, userDto.getPlatformId());
+            preparedStatement.setString(2, userDto.getEmail());
+
+            preparedStatement.executeUpdate();
 
         }catch (SQLException e) {
             throw new RuntimeException(e);

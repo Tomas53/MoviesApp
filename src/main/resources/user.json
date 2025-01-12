@@ -1,149 +1,27 @@
 [
   {
     "id": 1,
-    "name": "John Doe",
-    "dateOfBirth": "1990-05-15",
-    "email": "johndoe@example.com",
-    "platforms": [
-      {
-        "platformId": 101,
-        "platformName": "Netflix",
-        "subscriptionType": "Monthly",
-        "price": 15.99,
-        "movies": [
-          {
-            "movieId": 201,
-            "title": "Inception",
-            "genre": "Sci-Fi",
-            "director": "Christopher Nolan",
-            "price": 3.99,
-            "movieCast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
-            "duration": 148,
-            "imdbRating": 8.8,
-            "metascore": 74
-          },
-          {
-            "movieId": 202,
-            "title": "The Matrix",
-            "genre": "Action",
-            "director": "Lana Wachowski, Lilly Wachowski",
-            "price": 2.99,
-            "movieCast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
-            "duration": 136,
-            "imdbRating": 8.7,
-            "metascore": 73
-          },
-          {
-            "movieId": 203,
-            "title": "Parasite",
-            "genre": "Thriller",
-            "director": "Bong Joon-ho",
-            "price": 4.99,
-            "movieCast": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
-            "duration": 132,
-            "imdbRating": 8.6,
-            "metascore": 96
-          }
-        ]
-      },
-      {
-        "platformId": 102,
-        "platformName": "Hulu",
-        "subscriptionType": "Yearly",
-        "price": 79.99,
-        "movies": [
-          {
-            "movieId": 204,
-            "title": "Titanic",
-            "genre": "Romance",
-            "director": "James Cameron",
-            "price": 3.99,
-            "movieCast": ["Leonardo DiCaprio", "Kate Winslet"],
-            "duration": 195,
-            "imdbRating": 7.8,
-            "metascore": 75
-          },
-          {
-            "movieId": 205,
-            "title": "Avengers: Endgame",
-            "genre": "Action",
-            "director": "Anthony Russo, Joe Russo",
-            "price": 5.99,
-            "movieCast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
-            "duration": 181,
-            "imdbRating": 8.4,
-            "metascore": 78
-          }
-        ]
-      }
-    ]
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com"
   },
   {
     "id": 2,
-    "name": "Jane Smith",
-    "dateOfBirth": "1985-07-20",
-    "email": "janesmith@example.com",
-    "platforms": [
-      {
-        "platformId": 103,
-        "platformName": "Disney+",
-        "subscriptionType": "Monthly",
-        "price": 7.99,
-        "movies": [
-          {
-            "movieId": 206,
-            "title": "Frozen",
-            "genre": "Animation",
-            "director": "Chris Buck, Jennifer Lee",
-            "price": 2.99,
-            "movieCast": ["Idina Menzel", "Kristen Bell", "Josh Gad"],
-            "duration": 102,
-            "imdbRating": 7.4,
-            "metascore": 74
-          },
-          {
-            "movieId": 207,
-            "title": "Moana",
-            "genre": "Animation",
-            "director": "Ron Clements, John Musker",
-            "price": 3.99,
-            "movieCast": ["Auli'i Cravalho", "Dwayne Johnson", "Rachel House"],
-            "duration": 107,
-            "imdbRating": 7.6,
-            "metascore": 81
-          }
-        ]
-      },
-      {
-        "platformId": 104,
-        "platformName": "Amazon Prime",
-        "subscriptionType": "Yearly",
-        "price": 119.00,
-        "movies": [
-          {
-            "movieId": 208,
-            "title": "The Godfather",
-            "genre": "Crime",
-            "director": "Francis Ford Coppola",
-            "price": 4.99,
-            "movieCast": ["Marlon Brando", "Al Pacino", "James Caan"],
-            "duration": 175,
-            "imdbRating": 9.2,
-            "metascore": 100
-          },
-          {
-            "movieId": 209,
-            "title": "The Shawshank Redemption",
-            "genre": "Drama",
-            "director": "Frank Darabont",
-            "price": 3.99,
-            "movieCast": ["Tim Robbins", "Morgan Freeman"],
-            "duration": 142,
-            "imdbRating": 9.3,
-            "metascore": 80
-          }
-        ]
-      }
-    ]
+    "name": "Bob Smith",
+    "email": "bob.smith@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Brown",
+    "email": "charlie.brown@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Diana Prince",
+    "email": "diana.prince@example.com"
+  },
+  {
+    "id": 5,
+    "name": "Eve Adams",
+    "email": "eve.adams@example.com"
   }
 ]
