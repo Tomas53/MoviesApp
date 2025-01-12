@@ -5,7 +5,6 @@
     "genre": "Sci-Fi",
     "director": "Christopher Nolan",
     "price": 3.99,
-    "movieCast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
     "duration": 148,
     "imdbRating": 8.8,
     "metascore": 74
@@ -16,7 +15,6 @@
     "genre": "Action",
     "director": "Lana Wachowski, Lilly Wachowski",
     "price": 2.99,
-    "movieCast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
     "duration": 136,
     "imdbRating": 8.7,
     "metascore": 73
@@ -27,7 +25,6 @@
     "genre": "Thriller",
     "director": "Bong Joon-ho",
     "price": 4.99,
-    "movieCast": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
     "duration": 132,
     "imdbRating": 8.6,
     "metascore": 96
@@ -38,7 +35,6 @@
     "genre": "Romance",
     "director": "James Cameron",
     "price": 3.99,
-    "movieCast": ["Leonardo DiCaprio", "Kate Winslet"],
     "duration": 195,
     "imdbRating": 7.8,
     "metascore": 75
@@ -49,7 +45,6 @@
     "genre": "Action",
     "director": "Anthony Russo, Joe Russo",
     "price": 5.99,
-    "movieCast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
     "duration": 181,
     "imdbRating": 8.4,
     "metascore": 78
@@ -60,7 +55,6 @@
     "genre": "Animation",
     "director": "Chris Buck, Jennifer Lee",
     "price": 2.99,
-    "movieCast": ["Idina Menzel", "Kristen Bell", "Josh Gad"],
     "duration": 102,
     "imdbRating": 7.4,
     "metascore": 74
@@ -71,7 +65,6 @@
     "genre": "Animation",
     "director": "Ron Clements, John Musker",
     "price": 3.99,
-    "movieCast": ["Auli'i Cravalho", "Dwayne Johnson", "Rachel House"],
     "duration": 107,
     "imdbRating": 7.6,
     "metascore": 81
@@ -82,7 +75,6 @@
     "genre": "Crime",
     "director": "Francis Ford Coppola",
     "price": 4.99,
-    "movieCast": ["Marlon Brando", "Al Pacino", "James Caan"],
     "duration": 175,
     "imdbRating": 9.2,
     "metascore": 100
@@ -93,7 +85,6 @@
     "genre": "Drama",
     "director": "Frank Darabont",
     "price": 3.99,
-    "movieCast": ["Tim Robbins", "Morgan Freeman"],
     "duration": 142,
     "imdbRating": 9.3,
     "metascore": 80
@@ -104,7 +95,6 @@
     "genre": "Drama",
     "director": "David Fincher",
     "price": 3.99,
-    "movieCast": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
     "duration": 139,
     "imdbRating": 8.8,
     "metascore": 66
@@ -115,7 +105,6 @@
     "genre": "Action",
     "director": "Christopher Nolan",
     "price": 4.99,
-    "movieCast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
     "duration": 152,
     "imdbRating": 9.0,
     "metascore": 84

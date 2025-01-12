@@ -19,24 +19,21 @@ public class DatabaseRepo {
         try (Connection connection = getConnection()) {
             Statement statement = connection.createStatement();
 
-            // Create the movies table first
             String createMoviesTable = """
                 CREATE TABLE IF NOT EXISTS movies (
-                    movie_id SERIAL PRIMARY KEY,
+                    movieId SERIAL PRIMARY KEY,
                     title VARCHAR(50),
                     genre VARCHAR(20),
                     director VARCHAR(100),
                     price DOUBLE PRECISION,
-                    movieCast TEXT,
                     duration INT,
-                    imdb_rating DOUBLE PRECISION,
+                    imdbRating DOUBLE PRECISION,
                     metascore INT
                 );
             """;
             System.out.println("[LOG] Executing SQL: " + createMoviesTable);
             statement.executeUpdate(createMoviesTable);
 
-            // Create the platforms table next
             String createPlatformsTable = """
                 CREATE TABLE IF NOT EXISTS platforms (
                     platform_id SERIAL PRIMARY KEY,
@@ -49,14 +46,12 @@ public class DatabaseRepo {
             System.out.println("[LOG] Executing SQL: " + createPlatformsTable);
             statement.executeUpdate(createPlatformsTable);
 
-            // Create the users table last
             String createUsersTable = """
                 CREATE TABLE IF NOT EXISTS users (
                     id SERIAL PRIMARY KEY,
                     name VARCHAR(255),
                     date_of_birth DATE,
                     email VARCHAR(100),
-                    street VARCHAR(255),
                     platform_id INT REFERENCES platforms(platform_id)
                 );
             """;
