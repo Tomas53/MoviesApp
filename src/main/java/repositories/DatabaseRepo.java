@@ -44,7 +44,7 @@ public class DatabaseRepo {
             
                 create table if not exists user_platform (
                     id serial primary key,
-                    user_id int references users(id),
+                    userId int references users(id),
                     platformId int references platforms(platformId)
                 );
             

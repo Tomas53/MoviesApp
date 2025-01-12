@@ -1,7 +1,4 @@
-import repositories.DatabaseRepo;
-import repositories.MovieRepo;
-import repositories.PlatformRepo;
-import repositories.UserRepo;
+import repositories.*;
 import utils.JsonFileConverter;
 
 public class Main {
@@ -11,12 +8,13 @@ public class Main {
         UserRepo userRepo = new UserRepo();
         PlatformRepo platformRepo = new PlatformRepo();
         MovieRepo movieRepo = new MovieRepo();
+        UserPlatformRepo userPlatformRepo = new UserPlatformRepo();
 
         databaseRepo.createTables();
-        seedDbTablesWithDummyData(jsonFileConverter, movieRepo, platformRepo, userRepo);
+        seedDbTablesWithDummyData(jsonFileConverter, movieRepo, platformRepo, userRepo, userPlatformRepo);
     }
 
-    private static void seedDbTablesWithDummyData(JsonFileConverter jsonFileConverter, MovieRepo movieRepo, PlatformRepo platformRepo, UserRepo userRepo) {
+    private static void seedDbTablesWithDummyData(JsonFileConverter jsonFileConverter, MovieRepo movieRepo, PlatformRepo platformRepo, UserRepo userRepo, UserPlatformRepo userPlatformRepo) {
         try {
             // Seed movies table
             var movies = jsonFileConverter.getAllMoviesFromJson();
@@ -34,6 +32,11 @@ public class Main {
                 userRepo.insertUser(user);
             }
             System.out.println("Users table seeded successfully!");
+
+            // Seed user platforms table
+            var userPlatforms = jsonFileConverter.getAllUserPlatformsFromJson();
+            userPlatformRepo.insertUserPlatforms(userPlatforms);
+            System.out.println("User platforms table seeded successfully!");
 
         } catch (Exception e) {
             System.err.println("Error seeding tables: " + e.getMessage());
