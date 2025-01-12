@@ -15,5 +15,6 @@ public class UserDto {
     private String name;
     private LocalDate dateOfBirth;
     private String email;
+    private int platformId;
     private List<PlatformDto> platforms;
 }
