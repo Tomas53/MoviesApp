@@ -7,8 +7,8 @@ import java.sql.Statement;
 
 public class DatabaseRepo {
     private static final String URL = "jdbc:postgresql://localhost:5432/moviesApp";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "postgres";
+    private static final String USER = "*";
+    private static final String PASSWORD = "*";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
@@ -19,24 +19,23 @@ public class DatabaseRepo {
             Statement statement = connection.createStatement();
             String sql = """
                 CREATE TABLE IF NOT EXISTS movies (
-                    movie_id SERIAL PRIMARY KEY,
+                    movieId SERIAL PRIMARY KEY,
                     title VARCHAR(50),
                     genre VARCHAR(20),
                     director VARCHAR(100),
                     price DOUBLE PRECISION,
-                    movieCast TEXT,
                     duration INT,
-                    imdb_rating DOUBLE PRECISION,
+                    imdbRating DOUBLE PRECISION,
                     metascore INT
                 );
-            
+
                 CREATE TABLE IF NOT EXISTS platforms (
                     platform_id SERIAL PRIMARY KEY,
                     platform_name VARCHAR(100),
                     subscription_type VARCHAR(50),
                     price INT
                 );
-            
+          
                 CREATE TABLE IF NOT EXISTS users (
                     id SERIAL PRIMARY KEY,
                     name VARCHAR(255),
@@ -54,7 +53,8 @@ public class DatabaseRepo {
                 create table if not exists platform_movies (
                     id serial primary key,
                     platform_id int references platforms(platform_id),
-                    movie_id int references movies(movie_id)
+                    movie_id int references movies(movie_id),
+                    platform_id INT REFERENCES platforms(platform_id)
                 );
             """;
             System.out.println("[LOG] " + sql);
