@@ -5,6 +5,7 @@ import repositories.MovieRepo;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MovieAnalyticsService {
@@ -29,4 +30,33 @@ public class MovieAnalyticsService {
                 .filter(m->m.getDuration()<durationLimit)
                 .collect(Collectors.toList());
     }
+
+    public String getMostPopularGenre (){
+        MovieRepo movieRepo=new MovieRepo();
+        return movieRepo.getAllMovies().stream()
+                .collect(Collectors.groupingBy(MovieDto::getGenre, Collectors.counting()))
+                .entrySet().stream()
+                .max(Comparator.comparingLong(Map.Entry::getValue))
+                .map(Map.Entry::getKey)
+                .orElse("No such most popular genre");
+    }
+
+    public String getDirectorWithHigestAverageIMDbRating(){
+        MovieRepo movieRepo=new MovieRepo();
+        return movieRepo.getAllMovies().stream()
+                .collect(Collectors.groupingBy(MovieDto::getDirector, Collectors.averagingDouble(MovieDto::getImdbRating)))
+                .entrySet().stream()
+                .max(Comparator.comparingDouble(Map.Entry::getValue))
+                .map(Map.Entry::getKey)
+                .orElse("No such director found");
+
+    }
+
+    public List<MovieDto>getMoviesByGenre (String genre){
+        MovieRepo movieRepo=new MovieRepo();
+        return movieRepo.getAllMovies().stream()
+                .filter(movieDto -> movieDto.getGenre().equals(genre))
+                .collect(Collectors.toList());
+    }
+
 }
