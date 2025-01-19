@@ -54,28 +54,56 @@ public class CLIInterface {
     }
 
     private void handleAnalytics() {
-        System.out.print("""
+
+        while (true) {
+            System.out.print("""
                 The movies analytics service can do several things like:
                 1 get top rated movies
                 2 get average movie rating for a platform
                 3 get movies under a duration
+                4 get most popular genre
+                5 get director with highest average IMDb rating
+                6 get movies by genre
+                7 exit
                 Please enter a number of an action:""");
 
-        int choice = getValidInput(1, 3);
+            int choice = getValidInput(1, 7);
+            switch (choice) {
+                case 1 -> movieAnalyticsService.getTopRatedMovies().forEach(System.out::println);
+                case 2 -> {
+                    System.out.print("Which platform: ");
+                    String platform = scanner.next();
+                    System.out.println(movieAnalyticsService.getAverageMovieRatingForSpecificPlatform(platform));
+                }
+                case 3 -> {
+                    System.out.print("Which duration: ");
+                    int duration = getValidInput(0, Integer.MAX_VALUE);
+                    movieAnalyticsService.getMoviesByDuration(duration).forEach(System.out::println);
+                }
+                case 4 -> {
+                    System.out.println("Most popular genre:");
+                    System.out.println(movieAnalyticsService.getMostPopularGenre());
+                    System.out.println();
+                }
+                case 5 -> {
+                    System.out.println("director with highest average IMDb rating:");
+                    System.out.println(movieAnalyticsService.getDirectorWithHigestAverageIMDbRating());
+                    System.out.println();
+                }
+                case 6 -> {
+                    System.out.println("Provide your chosen genre:");
+                    String chosenGenre = scanner.next();
+                    movieAnalyticsService.getMoviesByGenre(chosenGenre).forEach(System.out::println);
+                    System.out.println();
+                }
 
-        switch (choice) {
-            case 1 -> movieAnalyticsService.getTopRatedMovies().forEach(System.out::println);
-            case 2 -> {
-                System.out.print("Which platform: ");
-                String platform = scanner.next();
-                System.out.println(movieAnalyticsService.getAverageMovieRatingForSpecificPlatform(platform));
+                default -> System.out.println("Invalid choice");
+
             }
-            case 3 -> {
-                System.out.print("Which duration: ");
-                int duration = getValidInput(0, Integer.MAX_VALUE);
-                movieAnalyticsService.getMoviesByDuration(duration).forEach(System.out::println);
+            if (choice == 7) {
+                System.out.println("Exiting analytics service...");
+                return;
             }
-            default -> System.out.println("Invalid choice");
         }
     }
 
